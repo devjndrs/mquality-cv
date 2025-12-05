@@ -96,13 +96,33 @@ python src/main.py --step train
 
 Key paths and parameters (e.g., directories, seed, target size) are defined in `src/config.py`. Modify this file to adapt the pipeline to your specific environment.
 
-## Technologies
+## 🛠️ Technologies & Tools
 
-*   **Python**: Core language.
-*   **OpenCV & PIL**: Image processing.
-*   **Albumentations**: Data augmentation.
-*   **PyTorch**: Deep learning framework support.
-*   **Pandas**: Reporting and data manipulation.
+This project leverages a modern Data Engineering stack to ensure efficient and reliable processing of computer vision datasets:
+
+### Orchestration & Workflow
+*   **Apache Airflow**: Manages and schedules the complex workflows of the data pipeline, ensuring task dependencies, retries, and monitoring are handled robustly.
+
+### Core Processing & Logic
+*   **Python 3.10+**: The primary programming language for all pipeline logic.
+*   **OpenCV & Pillow (PIL)**: High-performance libraries for image manipulation and processing.
+*   **NumPy**: Fundamental package for numerical computations and array manipulation.
+
+### Data Augmentation & Transformation
+*   **Albumentations**: A fast and flexible library for image augmentation, critical for improving model robustness and generalizing datasets.
+
+### Data Validation & Quality Assurance
+*   **Pandas**: Used for generating validation reports, logs, and analyzing dataset statistics.
+*   **Hashlib**: Implements data integrity checks to detect duplicate or corrupt files efficiently.
+
+### Deep Learning & Formats
+*   **PyTorch**: The underlying framework for model training and tensor operations.
+*   **YOLO (Ultralytics)**: Object detection model architecture supported by the pipeline's output format.
+*   **COCO API**: Standard format for object detection annotations, ensuring compatibility with various frameworks.
+
+### Version Control
+*   **Git**: Source code management.
+*   **DVC (Data Version Control)**: *Recommended* for managing large dataset versions and pipeline reproducibility.
 
 ## License
 
